@@ -22,6 +22,14 @@ public class Pessoa implements Comparable<Pessoa>{
     public int getAge() {
         return age;
     }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
 
 class BuscaPessoaIdade implements Comparator<Pessoa>{
@@ -35,6 +43,7 @@ class BuscaPessoaIdade implements Comparator<Pessoa>{
             return 0;
     }
 }
+//Compara por nome em questão de empate
 class BuscaPessoaNomeIdade implements Comparator<Pessoa>{
     @Override
     public int compare(Pessoa p1, Pessoa p2)   {
@@ -43,4 +52,6 @@ class BuscaPessoaNomeIdade implements Comparator<Pessoa>{
             return age;
         return p1.getNome().compareTo(p2.getNome());
     }
+
+
 }
