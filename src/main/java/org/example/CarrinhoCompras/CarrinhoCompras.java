@@ -16,7 +16,8 @@ public class CarrinhoCompras {
     public void removerItem(String nome){
         List<Item> removerItem = new ArrayList<>();
         for(Item item: carrinhoItem){
-            if(nome.equals(nome)){
+            if(nome.equals(item.getNome())){
+                System.out.println("nome = " + nome);
                 removerItem.add(item);
             }
         }

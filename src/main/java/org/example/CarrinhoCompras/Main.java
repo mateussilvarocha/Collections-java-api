@@ -11,6 +11,7 @@ public class Main {
         carrinho.adicionarItem("Item4", 2,2);
         System.out.println(carrinho.calcularValorTotal());
         carrinho.exibirItens();
+        carrinho.removerItem("Item4");
         carrinho.adicionarItem("Item3", 4,2);
         System.out.println(carrinho.calcularValorTotal());
         carrinho.exibirItens();
