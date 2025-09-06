@@ -1,7 +1,6 @@
-package org.example.OrdenacaoList;
+package org.example.OrdenacaoPessoas;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
