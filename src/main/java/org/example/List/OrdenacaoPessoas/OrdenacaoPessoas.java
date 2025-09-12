@@ -1,7 +1,4 @@
-package org.example.List;
-
-import org.example.List.CompareAltura;
-import org.example.List.Pessoa;
+package org.example.List.OrdenacaoPessoas;
 
 import java.util.ArrayList;
 import java.util.Collections;
