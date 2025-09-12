@@ -1,4 +1,4 @@
-package org.example.CarrinhoCompras;
+package org.example.List.CarrinhoCompras;
 
 public class Item {
     private String nome;

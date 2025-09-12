@@ -1,4 +1,4 @@
-package org.example.ExerciciosList;
+package org.example.List.ExerciciosList;
 
 public class Tarefa {
     private String descricao;

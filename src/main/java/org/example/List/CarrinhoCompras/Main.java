@@ -1,6 +1,4 @@
-package org.example.CarrinhoCompras;
-
-import java.util.Arrays;
+package org.example.List.CarrinhoCompras;
 
 public class Main {
     public static void main(String[] args) {

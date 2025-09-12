@@ -1,4 +1,4 @@
-package org.example.CarrinhoCompras;
+package org.example.List.CarrinhoCompras;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,8 @@ public class CarrinhoCompras {
 
     public void adicionarItem(String nome, double preco, int quantidade){
         carrinhoItem.add(new Item(nome, preco, quantidade));
+
+
     }
     public void removerItem(String nome){
         List<Item> removerItem = new ArrayList<>();

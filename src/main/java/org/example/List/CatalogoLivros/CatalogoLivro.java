@@ -1,8 +1,7 @@
-package org.example.CatalogoLivros;
+package org.example.List.CatalogoLivros;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class CatalogoLivro {
     List<Livro> catalogo;

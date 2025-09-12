@@ -1,7 +1,6 @@
-package org.example.SomaNumeros;
+package org.example.List.SomaNumeros;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;

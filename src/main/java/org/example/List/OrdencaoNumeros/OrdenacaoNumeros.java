@@ -1,10 +1,8 @@
-package org.example.OrdencaoNumeros;
+package org.example.List.OrdencaoNumeros;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 public class OrdenacaoNumeros {
     private List<Integer> numeros;

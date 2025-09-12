@@ -1,6 +1,4 @@
-package org.example.ExerciciosList;
-
-import java.util.Arrays;
+package org.example.List.ExerciciosList;
 
 public class Main {
     public static void main(String[] args) {

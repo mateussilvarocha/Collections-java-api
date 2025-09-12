@@ -1,4 +1,4 @@
-package org.example.CatalogoLivros;
+package org.example.List.CatalogoLivros;
 
 public class Livro {
     private String titulo;
