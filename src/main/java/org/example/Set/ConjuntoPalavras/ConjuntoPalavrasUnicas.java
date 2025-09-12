@@ -1,63 +1,64 @@
 package org.example.Set.ConjuntoPalavras;
 
-import org.example.Set.ConjuntoConvidados.ConjuntoConvidados;
 
-import java.util.Arrays;
 import java.util.Set;
 import java.util.HashSet;
 
 public class ConjuntoPalavrasUnicas {
-    private Set<String> palavras;
+    private final Set<Palavra> palavras;
 
     public ConjuntoPalavrasUnicas() {
         palavras = new HashSet<>();
     }
 
-    public void adicionarPalavra(String palavra){
+    public void adicionarPalavra(Palavra palavra){
         palavras.add(palavra);
     }
-    public void removerPalavra(String palavra){
+    public void removerPalavra(Palavra palavra){
         palavras.remove(palavra);
     }
-    public boolean verificarPalavra(String palavra){
+    public boolean verificarPalavra(Palavra palavra){
         if(palavras.isEmpty()){return false;}
-        for(String p: palavras){
+        for(Palavra p: palavras){
             if(palavra.equals(p)){
                 return true;
             }
         }
         return false;
     }
-    public Set<String> exibirPalavrasUnicas(){
-        Set<String> listaString= new HashSet<>();
-        for(String p: palavras){
-            if(p.trim().contains(" ")){
+    public Set<Palavra> exibirPalavrasUnicas(){
+        Set<Palavra> listaPalavra= new HashSet<>();
+        for(Palavra p: palavras){
+            if(p.getPalavra().trim().contains(" ")){
                 continue;
             }
-            listaString.add(p);
+            listaPalavra.add(p);
         }
-        return listaString;
+        return listaPalavra;
     }
     public void exibirPalavras(){
         System.out.println("Mostrando");
-        for(String p: palavras){
+        for(Palavra p: palavras){
             System.out.println(p);
         }
     }
+
     public static void main(String[] args){
         ConjuntoPalavrasUnicas conjuntoPalavrasUnicas = new ConjuntoPalavrasUnicas();
-        conjuntoPalavrasUnicas.adicionarPalavra("palavra");
-        conjuntoPalavrasUnicas.adicionarPalavra("Au au");
-        conjuntoPalavrasUnicas.adicionarPalavra("Mordeu");
+        conjuntoPalavrasUnicas.adicionarPalavra(new Palavra("palavra"));
+        conjuntoPalavrasUnicas.adicionarPalavra(new Palavra("Au au"));
+        conjuntoPalavrasUnicas.adicionarPalavra(new Palavra("Au au"));
+        conjuntoPalavrasUnicas.adicionarPalavra(new Palavra("Mordeu"));
+        conjuntoPalavrasUnicas.adicionarPalavra(new Palavra("Mordeu"));
         conjuntoPalavrasUnicas.exibirPalavras();
         System.out.println("Palavras unicas");
-        for(String p: conjuntoPalavrasUnicas.exibirPalavrasUnicas()){
+        for(Palavra p: conjuntoPalavrasUnicas.exibirPalavrasUnicas()){
 
             System.out.println(p);
         }
         conjuntoPalavrasUnicas.exibirPalavras();
-        conjuntoPalavrasUnicas.removerPalavra("Au au");
-        if(conjuntoPalavrasUnicas.verificarPalavra("palavra")){
+        conjuntoPalavrasUnicas.removerPalavra(new Palavra("Au au"));
+        if(conjuntoPalavrasUnicas.verificarPalavra(new Palavra("palavra"))){
             System.out.println("A palavra 'palavra' existe");
         };
         conjuntoPalavrasUnicas.exibirPalavrasUnicas();
