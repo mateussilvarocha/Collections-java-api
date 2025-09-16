@@ -13,27 +13,55 @@ public class AgendaContatos {
     public void adicionarContato(String nome, Integer telefone){
         contatos.put(nome, telefone);
     }
-    public void removerContato(String nome){
-        contatos.remove(nome);
+    public void removerContato(String nome) {
+        if (!this.contatos.isEmpty()) {
+            this.contatos.remove(nome);
+        } else {
+            System.out.println("A agenda de contatos está vazia.");
+        }
+
     }
-    public void exibirContatos(){
-        System.out.println(contatos);
+
+    public void exibirContatos() {
+        if (!this.contatos.isEmpty()) {
+            System.out.println(this.contatos);
+        } else {
+            System.out.println("A agenda de contatos está vazia.");
+        }
+
     }
-    public int pesquisarPorNome(String nome){
-        return contatos.get(nome);
+
+    public Integer pesquisarPorNome(String nome) {
+        Integer numeroPorNome = null;
+        if (!this.contatos.isEmpty()) {
+            numeroPorNome = (Integer)this.contatos.get(nome);
+            if (numeroPorNome == null) {
+                System.out.println("Contato "+nome+" não encontrado na agenda.");
+            }
+        } else {
+            System.out.println("A agenda de contatos está vazia.");
+        }
+
+        return numeroPorNome;
     }
 
     public static void main(String[] args) {
-        AgendaContatos agenda = new AgendaContatos();
-        agenda.adicionarContato("Mateus", 1000);
-        agenda.adicionarContato("Mateus", 1001);//sobrescreve a chave mateus
-        agenda.adicionarContato("Luiz", 9909);
-        agenda.adicionarContato("Carlos", 7690);
-        agenda.adicionarContato("Viviane", 1145);
-        agenda.exibirContatos();
-        System.out.println(agenda.pesquisarPorNome("Mateus"));
-        agenda.removerContato("Mateus");
-        agenda.exibirContatos();
+        AgendaContatos agendaContatos = new AgendaContatos();
+        agendaContatos.adicionarContato("Camila", 123456);
+        agendaContatos.adicionarContato("João", 5665);
+        agendaContatos.adicionarContato("Carlos", 1111111);
+        agendaContatos.adicionarContato("Ana", 654987);
+        agendaContatos.adicionarContato("Maria", 1111111);
+        agendaContatos.adicionarContato("Camila", 44444);
+        agendaContatos.exibirContatos();
+        agendaContatos.removerContato("Maria");
+        agendaContatos.exibirContatos();
+        String nomePesquisa = "João";
+        Integer numeroPesquisa = agendaContatos.pesquisarPorNome("João");
+        System.out.println("Número de telefone de " + nomePesquisa + ": " + numeroPesquisa);
+        String nomePesquisaNaoExistente = "Paula";
+        Integer numeroPesquisaNaoExistente = agendaContatos.pesquisarPorNome(nomePesquisaNaoExistente);
+        System.out.println("Número de telefone de " + nomePesquisaNaoExistente + ": " + numeroPesquisaNaoExistente);
 
     }
 }
